@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2024
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LatexCreator", "LatexCreator\LatexCreator.csproj", "{FF3E6782-D966-492D-9E15-D9EB73E143AB}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Ello", "Ello\Ello.vdproj", "{AFE0FE38-8EED-44D8-833B-EE18DD6709B0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FF3E6782-D966-492D-9E15-D9EB73E143AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF3E6782-D966-492D-9E15-D9EB73E143AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF3E6782-D966-492D-9E15-D9EB73E143AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF3E6782-D966-492D-9E15-D9EB73E143AB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AFE0FE38-8EED-44D8-833B-EE18DD6709B0}.Debug|Any CPU.ActiveCfg = Debug
+		{AFE0FE38-8EED-44D8-833B-EE18DD6709B0}.Release|Any CPU.ActiveCfg = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {437CA1B2-DBF6-4513-A0BC-096781D4E43C}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,9 @@
+C:\Users\hammi\source\repos\LatexCreator\LatexCreator\bin\Debug\LatexCreator.exe.config
+C:\Users\hammi\source\repos\LatexCreator\LatexCreator\bin\Debug\LatexCreator.exe
+C:\Users\hammi\source\repos\LatexCreator\LatexCreator\bin\Debug\LatexCreator.pdb
+C:\Users\hammi\source\repos\LatexCreator\LatexCreator\obj\Debug\LatexCreator.Form1.resources
+C:\Users\hammi\source\repos\LatexCreator\LatexCreator\obj\Debug\LatexCreator.Properties.Resources.resources
+C:\Users\hammi\source\repos\LatexCreator\LatexCreator\obj\Debug\LatexCreator.csproj.GenerateResource.Cache
+C:\Users\hammi\source\repos\LatexCreator\LatexCreator\obj\Debug\LatexCreator.csproj.CoreCompileInputs.cache
+C:\Users\hammi\source\repos\LatexCreator\LatexCreator\obj\Debug\LatexCreator.exe
+C:\Users\hammi\source\repos\LatexCreator\LatexCreator\obj\Debug\LatexCreator.pdb
