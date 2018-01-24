@@ -19,7 +19,7 @@ namespace LatexCreator
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            ++button1.Height = this.Height / 10;
+            button1.Height = this.Height / 10;
             button1.Width = this.Width-16;
             if ((this.Height / 2) > this.Width)
                 button1.Font = new Font(button1.Font.FontFamily, this.Width / 12);
@@ -30,6 +30,9 @@ namespace LatexCreator
             textBox1.Size = new Size(this.Width - 100, 20);
             textBox2.Size = new Size(this.Width - 100, 20);
             textBox3.Size = new Size(this.Width - 100, this.Height - 170);
+            Compile.Location = new Point(this.Width - 102, this.Height - 80);
+            Update.Location = new Point(this.Width - 102,this.Height - 109);
+            button3.Location = new Point(10, this.Height - 80);
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -93,6 +96,29 @@ namespace LatexCreator
         private void label3_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void Back_Click(object sender, EventArgs e)
+        {
+            panel2.Visible = false;
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            panel3.Visible = false;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            panel3.Visible = true;
+        }
+
+        private void panel3_Resize(object sender, EventArgs e)
+        {
+            Compile.Location = new Point(this.Width - 100, this.Height - 80);
+            Update.Location = new Point(this.Width - 100, this.Height - 109);
+            button3.Location = new Point(20, this.Height - 80);
+            textBox4.Size = new Size(this.Width - 40, this.Height - 210);
         }
     }
 }
