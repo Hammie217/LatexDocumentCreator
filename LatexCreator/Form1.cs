@@ -12,6 +12,7 @@ namespace LatexCreator
 {
     public partial class Form1 : Form
     {
+        string text = "";
         public Form1()
         {
             InitializeComponent();
@@ -119,6 +120,11 @@ namespace LatexCreator
             Update.Location = new Point(this.Width - 100, this.Height - 109);
             button3.Location = new Point(20, this.Height - 80);
             textBox4.Size = new Size(this.Width - 40, this.Height - 210);
+        }
+
+        private void Update_Click(object sender, EventArgs e)
+        {
+            textBox4.Text = text;
         }
     }
 }
