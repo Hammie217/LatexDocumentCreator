@@ -110,21 +110,44 @@ namespace LatexCreator
 
         private void button2_Click(object sender, EventArgs e)
         {
-            textBox4.AppendText("\\documentclass[a4paper]{article}" + Environment.NewLine + "\\usepackage[english]{babel}" + Environment.NewLine + "\\usepackage[utf8x]{inputenc}" + Environment.NewLine + "\\usepackage[T1]{fontenc}" + Environment.NewLine + "\\usepackage[a4paper,top=3cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}" + Environment.NewLine + "\\usepackage{amsmath}" + Environment.NewLine + "\\usepackage{graphicx}" + Environment.NewLine + "\\usepackage[colorinlistoftodos]{todonotes}" + Environment.NewLine + "\\usepackage[colorlinks=true, allcolors=blue]{hyperref}" + Environment.NewLine);
-            textBox4.AppendText("\\title{" + textBox2.Text + "}");
-            textBox4.AppendText(Environment.NewLine);
-            textBox4.AppendText("\\author{" + textBox1.Text + "}");
-            textBox4.AppendText(Environment.NewLine);
-            textBox4.AppendText("\\begin{document}");
-            textBox4.AppendText(Environment.NewLine);
-            textBox4.AppendText("\\maketitle");
-            textBox4.AppendText(Environment.NewLine);
-            textBox4.AppendText("\\begin{abstract}");
-            textBox4.AppendText(Environment.NewLine);
-            textBox4.AppendText(textBox3.Text);
-            textBox4.AppendText(Environment.NewLine);
-            textBox4.AppendText("\\end{abstract}");
-            textBox4.AppendText(Environment.NewLine);
+            if (textBox4.Text.Contains("\\title"))
+            {
+                textBox4.Text=textBox4.Text.Substring(textBox4.Text.IndexOf("\\end{abstract}"));
+                textBox4.Text = textBox4.Text.Remove(textBox4.Text.IndexOf("\\end{abstract}"), "\\end{abstract}".Length);
+                textBox4.Text = textBox4.Text.Insert(0, Environment.NewLine);
+                textBox4.Text = textBox4.Text.Insert(0, "\\end{abstract}");
+                textBox4.Text = textBox4.Text.Insert(0, Environment.NewLine);
+                textBox4.Text = textBox4.Text.Insert(0, textBox3.Text);
+                textBox4.Text = textBox4.Text.Insert(0, Environment.NewLine);
+                textBox4.Text = textBox4.Text.Insert(0, "\\begin{abstract}");
+                textBox4.Text = textBox4.Text.Insert(0, Environment.NewLine);
+                textBox4.Text = textBox4.Text.Insert(0, "\\maketitle");
+                textBox4.Text = textBox4.Text.Insert(0, Environment.NewLine);
+                textBox4.Text = textBox4.Text.Insert(0, "\\begin{document}");
+                textBox4.Text = textBox4.Text.Insert(0, Environment.NewLine);
+                textBox4.Text = textBox4.Text.Insert(0, "\\author{" + textBox1.Text + "}");
+                textBox4.Text = textBox4.Text.Insert(0, Environment.NewLine);
+                textBox4.Text = textBox4.Text.Insert(0, "\\title{" + textBox2.Text + "}");
+                textBox4.Text = textBox4.Text.Insert(0, "\\documentclass[a4paper]{article}" + Environment.NewLine + "\\usepackage[english]{babel}" + Environment.NewLine + "\\usepackage[utf8x]{inputenc}" + Environment.NewLine + "\\usepackage[T1]{fontenc}" + Environment.NewLine + "\\usepackage[a4paper,top=3cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}" + Environment.NewLine + "\\usepackage{amsmath}" + Environment.NewLine + "\\usepackage{graphicx}" + Environment.NewLine + "\\usepackage[colorinlistoftodos]{todonotes}" + Environment.NewLine + "\\usepackage[colorlinks=true, allcolors=blue]{hyperref}" + Environment.NewLine);
+            }
+            else
+            {
+                textBox4.AppendText("\\documentclass[a4paper]{article}" + Environment.NewLine + "\\usepackage[english]{babel}" + Environment.NewLine + "\\usepackage[utf8x]{inputenc}" + Environment.NewLine + "\\usepackage[T1]{fontenc}" + Environment.NewLine + "\\usepackage[a4paper,top=3cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}" + Environment.NewLine + "\\usepackage{amsmath}" + Environment.NewLine + "\\usepackage{graphicx}" + Environment.NewLine + "\\usepackage[colorinlistoftodos]{todonotes}" + Environment.NewLine + "\\usepackage[colorlinks=true, allcolors=blue]{hyperref}" + Environment.NewLine);
+                textBox4.AppendText("\\title{" + textBox2.Text + "}");
+                textBox4.AppendText(Environment.NewLine);
+                textBox4.AppendText("\\author{" + textBox1.Text + "}");
+                textBox4.AppendText(Environment.NewLine);
+                textBox4.AppendText("\\begin{document}");
+                textBox4.AppendText(Environment.NewLine);
+                textBox4.AppendText("\\maketitle");
+                textBox4.AppendText(Environment.NewLine);
+                textBox4.AppendText("\\begin{abstract}");
+                textBox4.AppendText(Environment.NewLine);
+                textBox4.AppendText(textBox3.Text);
+                textBox4.AppendText(Environment.NewLine);
+                textBox4.AppendText("\\end{abstract}");
+                textBox4.AppendText(Environment.NewLine);
+            }
             panel3.Visible = true;
         }
 
@@ -167,6 +190,19 @@ namespace LatexCreator
         private void Compile_Click(object sender, EventArgs e)
         {
             textBox4.AppendText("\\end{ document}");
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            using (Form4 form4 = new Form4())
+            {
+                if (form4.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                {
+                    textBox4.Text += "\\subsubsection{" + form4.StringText + "}";
+                    textBox4.AppendText(Environment.NewLine);
+                }
+            }
+
         }
     }
 }

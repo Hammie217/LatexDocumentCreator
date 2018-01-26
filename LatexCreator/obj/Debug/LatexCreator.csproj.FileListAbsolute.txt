@@ -18,3 +18,5 @@ C:\Users\hammi\source\repos\LatexCreator\LatexDocumentCreator\LatexCreator\bin\D
 C:\Users\hammi\source\repos\LatexCreator\LatexDocumentCreator\LatexCreator\bin\Debug\LatexCreator.pdb
 C:\Users\hammi\source\repos\LatexCreator\LatexDocumentCreator\LatexCreator\obj\Debug\LatexCreator.Form2.resources
 C:\Users\hammi\source\repos\LatexCreator\LatexDocumentCreator\LatexCreator\obj\Debug\LatexCreator.Form3.resources
+C:\Users\hammi\source\repos\LatexCreator\LatexDocumentCreator\LatexCreator\obj\Debug\LatexCreator.csprojResolveAssemblyReference.cache
+C:\Users\hammi\source\repos\LatexCreator\LatexDocumentCreator\LatexCreator\obj\Debug\LatexCreator.Form4.resources

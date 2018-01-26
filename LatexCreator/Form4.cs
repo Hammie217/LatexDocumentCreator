@@ -10,22 +10,17 @@ using System.Windows.Forms;
 
 namespace LatexCreator
 {
-    public partial class Form3 : Form
+    public partial class Form4 : Form
     {
         public string StringText { get; set; }
-        public Form3()
+        public Form4()
         {
             InitializeComponent();
         }
 
         private void label1_Click(object sender, EventArgs e)
         {
-            
-        }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            StringText = textBox1.Text;
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -33,7 +28,18 @@ namespace LatexCreator
 
         }
 
-        private void Form3_Resize(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
+        {
+            StringText = textBox1.Text;
+        }
+
+        private void Form4_Load(object sender, EventArgs e)
+        {
+            textBox1.Size = new Size(this.Width - 40, 20);
+            button1.Location = new Point(20, this.Height - 80);
+        }
+
+        private void Form4_Resize(object sender, EventArgs e)
         {
             textBox1.Size = new Size(this.Width - 40, 20);
             button1.Location = new Point(20, this.Height - 80);
@@ -45,13 +51,6 @@ namespace LatexCreator
             {
                 button1.PerformClick();
             }
-        }
-
-        private void Form3_Load(object sender, EventArgs e)
-        {
-            textBox1.Size = new Size(this.Width - 40, 20);
-            button1.Location = new Point(20, this.Height - 80);
-
         }
     }
 }
