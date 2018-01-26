@@ -132,7 +132,7 @@
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(98, 23);
             this.button8.TabIndex = 7;
-            this.button8.Text = "button8";
+            this.button8.Text = "Image";
             this.button8.UseVisualStyleBackColor = true;
             // 
             // button7
@@ -170,6 +170,7 @@
             this.button4.TabIndex = 3;
             this.button4.Text = "Heading";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button3
             // 
@@ -189,6 +190,7 @@
             this.Update.TabIndex = 1;
             this.Update.Text = "Update";
             this.Update.UseVisualStyleBackColor = true;
+            this.Update.Visible = false;
             this.Update.Click += new System.EventHandler(this.Update_Click);
             // 
             // Compile

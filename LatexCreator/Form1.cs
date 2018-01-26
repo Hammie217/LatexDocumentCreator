@@ -12,7 +12,6 @@ namespace LatexCreator
 {
     public partial class Form1 : Form
     {
-        string text = "";
         public Form1()
         {
             InitializeComponent();
@@ -124,7 +123,18 @@ namespace LatexCreator
 
         private void Update_Click(object sender, EventArgs e)
         {
-            textBox4.Text = text;
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            using(Form2 form2 = new Form2())
+            {
+                if (form2.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                {
+                    textBox4.Text += "\\section{"+form2.StringText+"}";
+                    textBox4.AppendText(Environment.NewLine);
+                }
+            }
         }
     }
 }
