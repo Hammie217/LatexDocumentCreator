@@ -189,7 +189,7 @@ namespace LatexCreator
 
         private void Compile_Click(object sender, EventArgs e)
         {
-            textBox4.AppendText("\\end{ document}");
+            textBox4.AppendText("\\end{document}");
         }
 
         private void button6_Click(object sender, EventArgs e)
@@ -203,6 +203,28 @@ namespace LatexCreator
                 }
             }
 
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            using (Form5 form5 = new Form5())
+            {
+                if (form5.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                {
+                    textBox4.AppendText("\\begin{figure}[htb!]");
+                    textBox4.AppendText(Environment.NewLine);
+                    textBox4.AppendText("\\centering");
+                    textBox4.AppendText(Environment.NewLine);
+                    textBox4.AppendText("\\includegraphics[width = 0.5\\textwidth]{"+form5.StringText+"}");
+                    textBox4.AppendText(Environment.NewLine);
+                    textBox4.AppendText("\\label{" + form5.StringText1+"}");
+                    textBox4.AppendText(Environment.NewLine);
+                    textBox4.AppendText("\\caption{"+form5.StringText2+"}");
+                    textBox4.AppendText(Environment.NewLine);
+                    textBox4.AppendText("\\end{figure}");
+                    textBox4.AppendText(Environment.NewLine);
+                }
+            }
         }
     }
 }

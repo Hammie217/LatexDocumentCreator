@@ -123,7 +123,7 @@
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(98, 23);
             this.button9.TabIndex = 8;
-            this.button9.Text = "button9";
+            this.button9.Text = "Plain text";
             this.button9.UseVisualStyleBackColor = true;
             // 
             // button8
@@ -134,6 +134,7 @@
             this.button8.TabIndex = 7;
             this.button8.Text = "Image";
             this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // button7
             // 
