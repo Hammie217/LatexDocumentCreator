@@ -110,6 +110,21 @@ namespace LatexCreator
 
         private void button2_Click(object sender, EventArgs e)
         {
+            textBox4.AppendText("\\documentclass[a4paper]{article}" + Environment.NewLine + "\\usepackage[english]{babel}" + Environment.NewLine + "\\usepackage[utf8x]{inputenc}" + Environment.NewLine + "\\usepackage[T1]{fontenc}" + Environment.NewLine + "\\usepackage[a4paper,top=3cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}" + Environment.NewLine + "\\usepackage{amsmath}" + Environment.NewLine + "\\usepackage{graphicx}" + Environment.NewLine + "\\usepackage[colorinlistoftodos]{todonotes}" + Environment.NewLine + "\\usepackage[colorlinks=true, allcolors=blue]{hyperref}" + Environment.NewLine);
+            textBox4.AppendText("\\title{" + textBox2.Text + "}");
+            textBox4.AppendText(Environment.NewLine);
+            textBox4.AppendText("\\author{" + textBox1.Text + "}");
+            textBox4.AppendText(Environment.NewLine);
+            textBox4.AppendText("\\begin{document}");
+            textBox4.AppendText(Environment.NewLine);
+            textBox4.AppendText("\\maketitle");
+            textBox4.AppendText(Environment.NewLine);
+            textBox4.AppendText("\\begin{abstract}");
+            textBox4.AppendText(Environment.NewLine);
+            textBox4.AppendText(textBox3.Text);
+            textBox4.AppendText(Environment.NewLine);
+            textBox4.AppendText("\\end{abstract}");
+            textBox4.AppendText(Environment.NewLine);
             panel3.Visible = true;
         }
 
@@ -147,6 +162,11 @@ namespace LatexCreator
                     textBox4.AppendText(Environment.NewLine);
                 }
             }
+        }
+
+        private void Compile_Click(object sender, EventArgs e)
+        {
+            textBox4.AppendText("\\end{ document}");
         }
     }
 }

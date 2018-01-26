@@ -202,6 +202,7 @@
             this.Compile.TabIndex = 0;
             this.Compile.Text = "Compile";
             this.Compile.UseVisualStyleBackColor = true;
+            this.Compile.Click += new System.EventHandler(this.Compile_Click);
             // 
             // textBox3
             // 
