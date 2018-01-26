@@ -136,5 +136,17 @@ namespace LatexCreator
                 }
             }
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            using (Form3 form3 = new Form3())
+            {
+                if (form3.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                {
+                    textBox4.Text += "\\subsection{" + form3.StringText + "}";
+                    textBox4.AppendText(Environment.NewLine);
+                }
+            }
+        }
     }
 }
