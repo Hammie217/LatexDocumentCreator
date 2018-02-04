@@ -207,24 +207,51 @@ namespace LatexCreator
 
         private void button8_Click(object sender, EventArgs e)
         {
-            using (Form5 form5 = new Form5())
+            using (Form7 form7 = new Form7())
             {
-                if (form5.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                if (form7.ShowDialog() == System.Windows.Forms.DialogResult.OK)
                 {
                     textBox4.AppendText("\\begin{figure}[htb!]");
                     textBox4.AppendText(Environment.NewLine);
                     textBox4.AppendText("\\centering");
                     textBox4.AppendText(Environment.NewLine);
-                    textBox4.AppendText("\\includegraphics[width = 0.5\\textwidth]{"+form5.StringText+"}");
+                    textBox4.AppendText("\\includegraphics[width =" + form7.StringText1 + "\\textwidth]{" + form7.StringText + "}");
                     textBox4.AppendText(Environment.NewLine);
-                    textBox4.AppendText("\\label{" + form5.StringText1+"}");
+                    textBox4.AppendText("\\label{" + form7.StringText3 + "}");
                     textBox4.AppendText(Environment.NewLine);
-                    textBox4.AppendText("\\caption{"+form5.StringText2+"}");
+                    textBox4.AppendText("\\caption{" + form7.StringText2 + "}");
                     textBox4.AppendText(Environment.NewLine);
                     textBox4.AppendText("\\end{figure}");
                     textBox4.AppendText(Environment.NewLine);
                 }
             }
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            using (Form6 form6 = new Form6())
+            {
+                if (form6.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                {
+                }
+            }
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            using (Form5 form5 = new Form5())
+            {
+                if (form5.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                {
+                    textBox4.AppendText(form5.StringText);
+                    textBox4.AppendText(Environment.NewLine);
+                }
+            }
+        }
+
+        private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

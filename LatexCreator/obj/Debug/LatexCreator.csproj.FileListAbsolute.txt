@@ -21,3 +21,4 @@ C:\Users\hammi\source\repos\LatexCreator\LatexDocumentCreator\LatexCreator\obj\D
 C:\Users\hammi\source\repos\LatexCreator\LatexDocumentCreator\LatexCreator\obj\Debug\LatexCreator.Form4.resources
 C:\Users\hammi\source\repos\LatexCreator\LatexDocumentCreator\LatexCreator\obj\Debug\LatexCreator.Form5.resources
 C:\Users\hammi\source\repos\LatexCreator\LatexDocumentCreator\LatexCreator\obj\Debug\LatexCreator.Form6.resources
+C:\Users\hammi\source\repos\LatexCreator\LatexDocumentCreator\LatexCreator\obj\Debug\LatexCreator.Form7.resources
